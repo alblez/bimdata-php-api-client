@@ -1,0 +1,26 @@
+{
+    "name": "albertohippo/bimdataclient",
+    "description": "Component for working with bimdata.io",
+    "keywords": ["BIMdata"],
+    "type": "library",
+    "version": "0.1",
+    "homepage": "https://bitbucket.org/albertohippo/bimdataclient",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AndreyKurmel",
+            "email": "kurmeldeveloper@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.2",
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "HippoBim\\": "src"
+        }
+    }
+}
