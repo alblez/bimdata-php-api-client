@@ -8,8 +8,7 @@ BIMData API is a tool to interact with your models stored on BIMData’s servers
 
 ### Requirements
 
-PHP 7.3 and later.
-Should also work with PHP 8.0 but has not been tested.
+PHP 7.4 or PHP 8.0.
 
 ### Composer
 
@@ -509,7 +508,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: `OAuth`
 - **Flow**: `application`
-- **Authorization URL**: ``
+- **Authorization URL**: `https://iam.bimdata.io/auth/realms/bimdata/protocol/openid-connect/token`
 - **Scopes**: N/A
 
 ## Tests
