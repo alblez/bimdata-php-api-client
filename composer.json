@@ -1,11 +1,14 @@
 {
-    "name": "albertohippo/bimdataclient",
-    "description": "Component for working with bimdata.io",
-    "keywords": ["BIMdata"],
-    "type": "library",
-    "version": "0.1",
-    "homepage": "https://bitbucket.org/albertohippo/bimdataclient",
+    "name": "alblez/bimdata-php-api-client",
+    "version": "0.0.0",
+    "description": "BIMData API is a tool to interact with your models stored on BIMData's servers. Through the API you can manage your projects the clouds upload your IFC files and manage them through endpoints",
     "license": "MIT",
+    "keywords": [
+        "BIMData",
+        "BIMData API"
+    ],
+    "type": "library",
+    "homepage": "https://github.com/alblez/bimdata-php-api-client",
     "authors": [
         {
             "name": "AndreyKurmel",
@@ -14,9 +17,8 @@
         }
     ],
     "minimum-stability": "stable",
-
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^7.4|^8.0",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
@@ -24,13 +26,17 @@
         "guzzlehttp/psr7": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.0 || ^9.0",
+        "phpunit/phpunit": "^8.0|^9.0",
         "friendsofphp/php-cs-fixer": "^2.12"
     },
     "autoload": {
-        "psr-4": { "OpenAPI\\Client\\" : "lib/" }
+        "psr-4": {
+            "OpenAPI\\Client\\" : "lib/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "OpenAPI\\Client\\Test\\" : "test/" }
+        "psr-4": {
+            "OpenAPI\\Client\\Test\\" : "test/"
+        }
     }
 }
