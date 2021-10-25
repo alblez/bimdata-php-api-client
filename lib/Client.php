@@ -47,6 +47,7 @@ class Client
      * @param string $api_key
      * @param string $client_id
      * @param string $client_secret
+     * @throws GuzzleException
      */
     public function __construct(string $api_key, string $client_id = '', string $client_secret = '')
     {

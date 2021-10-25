@@ -292,7 +292,6 @@ class CheckPlan implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setName($name)
     {
-
         if ((mb_strlen($name) < 1)) {
             throw new \InvalidArgumentException('invalid length for $name when calling CheckPlan., must be bigger than or equal to 1.');
         }
@@ -483,7 +482,7 @@ class CheckPlan implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -509,5 +508,3 @@ class CheckPlan implements ModelInterface, ArrayAccess, \JsonSerializable
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

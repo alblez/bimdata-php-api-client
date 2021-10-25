@@ -276,7 +276,6 @@ class BcfProject implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setProjectId($project_id)
     {
-
         if (!is_null($project_id) && (mb_strlen($project_id) < 1)) {
             throw new \InvalidArgumentException('invalid length for $project_id when calling BcfProject., must be bigger than or equal to 1.');
         }
@@ -378,7 +377,7 @@ class BcfProject implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -404,5 +403,3 @@ class BcfProject implements ModelInterface, ArrayAccess, \JsonSerializable
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

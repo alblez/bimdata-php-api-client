@@ -445,7 +445,6 @@ class CheckerResult implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function setErrorDetail($error_detail)
     {
-
         if (!is_null($error_detail) && (mb_strlen($error_detail) < 1)) {
             throw new \InvalidArgumentException('invalid length for $error_detail when calling CheckerResult., must be bigger than or equal to 1.');
         }
@@ -516,7 +515,7 @@ class CheckerResult implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -542,5 +541,3 @@ class CheckerResult implements ModelInterface, ArrayAccess, \JsonSerializable
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-
