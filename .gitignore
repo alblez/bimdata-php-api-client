@@ -12,3 +12,4 @@ yarn-error.log
 composer.lock
 worker.log
 /storage/tmp/
+/.php_cs.cache
