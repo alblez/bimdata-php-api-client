@@ -2,6 +2,7 @@
 
 namespace OpenAPI\Client;
 
+use GuzzleHttp\Exception\GuzzleException;
 use OpenAPI\Client\Api\CheckerApi;
 use OpenAPI\Client\Api\CollaborationApi;
 use OpenAPI\Client\Api\IfcApi;
@@ -11,39 +12,34 @@ use OpenAPI\Client\Api\WebhookApi;
 class Client
 {
     /**
-     * @var
-     */
-    public $bcfApi;
-
-    /**
      * @var CheckerApi
      */
-    public $checkerApi;
+    public CheckerApi $checkerApi;
 
     /**
      * @var CollaborationApi
      */
-    public $collaborationApi;
+    public CollaborationApi $collaborationApi;
 
     /**
      * @var IfcApi
      */
-    public $ifcApi;
+    public IfcApi $ifcApi;
 
     /**
      * @var SsoApi
      */
-    public $ssoApi;
+    public SsoApi $ssoApi;
 
     /**
      * @var WebhookApi
      */
-    public $webhookApi;
+    public WebhookApi $webhookApi;
 
     /**
      * @var Configuration
      */
-    public $config;
+    public Configuration $config;
 
 
     /**
@@ -73,6 +69,7 @@ class Client
     /**
      * @param string $client_id
      * @param string $client_secret
+     * @throws GuzzleException
      */
     public function auth(string $client_id, string $client_secret)
     {
